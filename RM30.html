@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>RandomMaths3.0</title>
+	<link rel="stylesheet" type="text/css" href="RM30.css">
+</head>
+<body>
+	<div id="leftpanel">
+		<p>High Score : <span id="hs"></span><p>
+	</div>
+	<img src="https://cdn.pixabay.com/photo/2014/04/02/10/44/gear-wheel-304395_960_720.png" id="param_btn" width="25px" height="25px" title="Parameters" alt="Parameters"/>
+	<div id="error">
+		<h2 id="titreErrors">Your last errors :</h2>
+		<p id="error1"></p>
+		<br>
+		<p id="error2"></p>
+		<br>
+		<p id="error3"></p>
+	</div>
+	<div id="contenu">
+		<h2 id="titre">RandomMaths   <span style="color: #a399ff;">3.0</span></h2>
+		<p id="question">ERROR</p>
+		<input id="input" placeholder="Enter your response"><br><button id="bouton" onclick="go();">Submit</button><br>
+		<strong><span id="score2">Score : <span style="color: #FFDF00" id="score">0 / 0</span></span></strong>
+		<br>
+		<span id="check"></span><br>
+		<button id="loadB">Load score</button><br>
+		<button id="restartB" onclick="restart();">Restart</button>
+	</div>
+	<div class="param nav">
+		<center>
+			<h3>Parameters</h3>
+			<br>
+			<button id="chMMNumberPanel">Change tables</button>
+			<button id="chOperation">Change the operations</button>
+		</center>
+	</div>
+	<div class="chMMNumber nav">
+		<center><h3>Change tables</h3></center>
+		<div style="position: absolute; left: 10%; top: 20%">
+			<span>Max addition number : <input type="text" id="iMaxA" value="501"></span><br>
+			<span>Max soustraction number : <input type="text" id="iMaxS" value="501"></span><br>
+			<span>Max multiplication number : <input type="text" id="iMaxM" value="15"></span><br>
+			<span>Max division number : <input type="text" id="iMaxD" value="15"></span><br>
+		</div>
+		<div style="position: absolute; left:50%; top: 20%">
+			<span>Min addition number : <input type="text" id="iMinA" value="1"></span><br>
+			<span>Min soustraction number : <input type="text" id="iMinS" value="1"></span><br>
+			<span>Min multiplication number : <input type="text" id="iMinM" value="1"></span><br>
+			<span>Min division number : <input type="text" id="iMinD" value="1"></span><br>
+		</div>
+		<center><button id="bouton_chMMNumber">Confirm</button></center>
+		<div id="chMMNumberErrors" style="color: red; display: block;">
+			<span></span><br>
+			<span></span>
+		</div>
+	</div>
+
+	<div class="chOperation nav">
+		<h3>Change tables</h3>
+
+		<input type="checkbox" id="additionBox" checked="true">
+		<label for="additionBox">Addition</label>
+		
+		<input type="checkbox" id="soustractionBox" checked="true">
+		<label for="soustractionBox">Soustraction</label>
+		
+		<input type="checkbox" id="multiplicationBox" checked="true">
+		<label for="multiplicationBox">Multiplication</label>
+		
+		<input type="checkbox" id="divisionBox" checked="true">
+		<label for="divisionBox">Division</label>
+		
+	</div>
+
+	<script src="RM30.js"></script>
+	<!-- <script src="grandeur.js"></script> -->
+	<div id="zoom">
+		<strong style="cursor: default; user-select: none;">Zoom : <span id="agrandir"> + </span> / 
+		<span id="reduire"> - </span></strong>
+	</div>
+</body>
+</html>
